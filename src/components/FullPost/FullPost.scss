@@ -1,0 +1,11 @@
+.full-post {
+  .container {
+    width: 780px;
+  }
+  &__text {
+    color: #000;
+  }
+  &__details {
+    opacity: 0.5;
+  }
+}
