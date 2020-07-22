@@ -3,15 +3,11 @@ import './Posts.scss';
 
 import { Post } from './../components';
 
-function Posts({ posts }) {
+function Posts({ items }) {
   return (
 
     <div className='post-list'>
-      {
-        posts.map(post => (
-          <Post {...post} />
-        ))
-      }
+      {items ? items.map(post => (<Post {...post} /> )) : 'Loading...'}
     </div>
 
   );

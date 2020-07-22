@@ -1,6 +1,8 @@
 import React from 'react';
 
-import { Header, Post, Add, Posts , FullPost, NotFound} from './components/components';
+import { Header, Add, FullPost, NotFound } from './components/components';
+
+import { Posts } from './modules/index';
 
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
@@ -18,26 +20,10 @@ function App() {
                 <Switch>
 
 
-                  <Route path='/' exact render={() => <Posts posts={[
-                    {
-                      _id:'1',
-                      title:'Title post',
-                      date: ''+new Date()
-                    },
-                    {
-                      _id:'2',
-                      title:'Title post',
-                      date: ''+new Date()
-                    },
-                    {
-                      _id:'3',
-                      title:'Title post',
-                      date: ''+new Date()
-                    }
-                  ]}/>}/>
-                <Route path='/post/:id' exact render={() => <FullPost title='Title FullPost' date={''+new Date()}/>}/> 
-                <Route path='/post/:id/edit' exact render={() => <Add />}/> 
-                <Route path='*' render={() => <NotFound/>}/>
+                  <Route path='/' exact render={() => <Posts />} />
+                  <Route path='/post/:id' exact render={() => <FullPost title='Title FullPost' date={'' + new Date()} />} />
+                  <Route path='/post/:id/edit' exact render={() => <Add />} />
+                  <Route path='*' render={() => <NotFound />} />
                 </Switch>
               </div>
             </Router>

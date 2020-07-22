@@ -1,0 +1,1 @@
+export { default as postsApi } from './../../../public/posts.json';
